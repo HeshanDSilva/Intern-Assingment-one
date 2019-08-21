@@ -15,15 +15,12 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void Login(View view){
+    public void login(View view){
+
         Intent intent = new Intent(this, DashBoardActivity.class);
-        EditText user_name = (EditText) findViewById(R.id.user_name);
-        String username = user_name.getText().toString();
-        EditText password = (EditText) findViewById(R.id.Password);
-        String Password = password.getText().toString();
-        intent.putExtra(USER_NAME,username);
-        intent.putExtra(PASSWORD,Password);
         startActivity(intent);
+        finish();
 
     }
+
 }
